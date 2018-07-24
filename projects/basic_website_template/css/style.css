@@ -1,0 +1,168 @@
+.container {
+    margin: 0 auto;
+}
+
+img {
+    width: 100%;
+}
+
+body {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 18px;
+    line-height: 1.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+.primary-text {
+    color: #5734BA;
+}
+
+#main-header {
+    border-bottom: 1px solid #5734BA;
+}
+
+#main-header ul {
+    padding-left: 0px;
+}
+
+#main-header nav {
+    text-transform: uppercase;
+}
+
+#main-header li {
+    font-weight: bold;
+    display: inline;
+    padding-right: 20px;
+    list-style: none;
+}
+
+#main-header a {
+    text-decoration: none;
+    color: #000;
+}
+
+#main-header a:hover {
+    color: #5734BA;
+    border-bottom: 2px solid #5734BA;
+}
+
+#showcase {
+    background: url("../images/purple.jpg") no-repeat center center fixed;
+    background-size: cover;
+    border-bottom: 1px solid #5734BA;
+    margin-bottom: 30px;
+}
+
+#showcase .row {
+    height: 600px;
+}
+
+#showcase h1 {
+    font-size: 50px;
+    margin: 0;
+    padding-bottom: 20px;
+}
+
+#showcase p {
+    color: #ccc;
+    margin: 0;
+}
+
+#showcase .showcase-content {
+    background: rgba(51, 51, 51, 0.85);
+    color: white;
+    border-radius: 90px;
+    padding: 40px;
+}
+
+#features h2 {
+    font-size: 35px;
+    margin: 0;
+    padding-bottom: 10px;
+}
+
+#features p {
+    color: fff;
+    color: #888;
+    margin: 0;
+    margin-bottom: 40px;
+}
+
+#features .fa {
+    font-size: 40px;
+    color: #5734BA;
+}
+
+@media(max-width:800px) {
+    #showcase h1 {
+        font-size: 30px;
+    }
+}
+
+#info {
+    background: url("../images/purple.jpg") no-repeat center center fixed;
+    background-size: cover;
+    color: #ccc;
+}
+
+#info img {
+    width: 300px;
+}
+
+#info h2 {
+    font-size: 35px;
+    margin: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#info ul {
+    list-style: none;
+    padding: 0px;
+}
+
+#info li {
+    line-height: 2em;
+    font-size: 20px;
+}
+
+#company {
+    background: #5734BA;
+    color: #fff;
+    padding: 10px 0;
+}
+
+#company h4 {
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
+
+#company ul {
+    padding: 0;
+    list-style: none;
+}
+
+#company input[type='text'] {
+    padding: 7px;
+}
+
+#company button {
+    background: #222;
+    color: #fff;
+    padding: 10px;
+    border: 1px solid white;
+}
+
+#company i {
+    margin-right: 5px;
+}
+
+@media(max-width:500px) {
+    #showcase h1 {
+        font-size: 26px;
+    }
+    #showcase .showcase-content {
+        padding: 40px 10px;
+    }
+}

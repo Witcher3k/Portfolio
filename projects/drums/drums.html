@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        background-image: url("1.jpeg");
+        height: 100vh;
+        padding: 0;
+        margin: 0;
+
+    }
+
+    section {
+        margin: 0 auto;
+        max-width: 1200px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+
+    }
+
+    div {
+        width: 100px;
+        height: 100px;
+        border: 2px solid yellow;
+        text-align: center;
+        background: rgba(0, 0, 0, 0.4);
+        color: white;
+        border-radius: 5px;
+        transition: all 0.07s;
+
+    }
+
+    kbd {
+        font-size: 3.5rem;
+        display: block;
+    }
+
+    .playing {
+        transform: scale(1.1);
+        border-color: crimson;
+        box-shadow: 0 0 10px red;
+    }
+</style>
+
+<body>
+    <section>
+        <div data-key="81">
+            <kbd>Q</kbd>
+            <span>some</span>
+        </div>
+        <div data-key="87">
+            <kbd>W</kbd>
+            <span>some</span>
+        </div>
+        <div data-key="69">
+            <kbd>E</kbd>
+            <span>some</span>
+        </div>
+        <div data-key="82">
+            <kbd>R</kbd>
+            <span>some</span>
+        </div>
+        <div data-key="84">
+            <kbd>T</kbd>
+            <span>some</span>
+        </div>
+        <div data-key="89">
+            <kbd>Y</kbd>
+            <span>some</span>
+        </div>
+
+        <audio data-key="81" src="./1.mp3"></audio>
+        <audio data-key="87" src="./2.mp3"></audio>
+        <audio data-key="69" src="./3.mp3"></audio>
+        <audio data-key="82" src="./4.mp3"></audio>
+        <audio data-key="84" src="./5.mp3"></audio>
+        <audio data-key="89" src="./6.mp3"></audio>
+    </section>
+
+
+    <script>
+        window.addEventListener('keydown', function (e) {
+            const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+            const key = document.querySelector(`div[data-key="${e.keyCode}"]`);
+            if (!audio) return;
+            audio.currentTime = 0;
+            audio.play();
+            key.classList.add('playing');
+
+        });
+
+        function removeTransistion(e) {
+            if (e.propertyName !== 'transform') return;
+            this.classList.remove('playing');
+        }
+
+        const keys = document.querySelectorAll("div");
+        keys.forEach(key => key.addEventListener('transitionend', removeTransistion));
+    </script>
+</body>
+
+</html>

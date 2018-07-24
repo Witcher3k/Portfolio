@@ -1,0 +1,227 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+/*header*/
+
+header {
+    background: #333;
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+
+.typing h1 {
+    color: #fff;
+    overflow: hidden;
+    border-right: .15em solid orange;
+    white-space: nowrap;
+    letter-spacing: 0.15em;
+    animation: typing 4s steps(45, end), blink-caret .7s infinite;
+}
+
+/* The typing effect */
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+    to {
+        width: 100%
+    }
+}
+
+/* The typewriter cursor effect */
+
+@keyframes blink-caret {
+    from,
+    to {
+        border-color: transparent
+    }
+    100% {
+        border-color: orange
+    }
+}
+
+.more-info {
+    color: #fff;
+    font-size: 1.5em;
+    padding: 0.5em;
+    margin: 0 auto;
+    margin-top: 10px;
+    border: 2px solid orange;
+    transform: translateX(-999%);
+    cursor: pointer;
+    width: 200px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.more-info:hover {
+    box-shadow: 0px 0px 0px 4px #333, 0px 0px 0px 6px orange;
+}
+
+.more-info:first-of-type {
+    margin-bottom: 0;
+}
+
+@media(max-width:580px) {
+    .typing h1 {
+        font-size: 1.2em;
+    }
+    .more-info {
+        font-size: 1em;
+    }
+}
+
+/*main*/
+
+h2 {
+    color: black;
+    font-size: 2em;
+    width: 400px;
+    margin: 0 auto;
+    margin-bottom: 1em;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    border-bottom: 4px solid orange;
+    border-top: 4px solid orange;
+    text-align: center;
+}
+
+main {
+    min-height: 100vh;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-image: url('img/pexels-photo-169573.jpeg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+main .projects {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.projects a {
+    text-decoration: none;
+    text-align: center;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 350px;
+    border: 2px solid orange;
+    color: #fff;
+    font-size: 1.5em;
+    cursor: pointer;
+    background-color: rgba(51, 51, 51, 0.7);
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: all 0.3s ease;
+}
+
+.projects a:hover {
+    transform: scale(1.03);
+}
+
+.projects .project1 {
+    background-image: url("./img/Przechwytywanie1.PNG");
+}
+
+.projects .project2 {
+    background-image: url("./img/Przechwytywanie2.PNG");
+}
+
+.projects .project3 {
+    background-image: url("./img/Przechwytywanie3.PNG");
+}
+
+.projects .project4 {
+    background-image: url("./img/Przechwytywanie4.PNG");
+}
+
+.projects .project5 {
+    background-image: url("./img/Przechwytywanie5.PNG");
+}
+
+.projects .project6 {
+    background-image: url("./img/Przechwytywanie6.PNG");
+}
+
+@media(max-width:1072px) {
+    main .projects {
+        grid-template-columns: 1fr 1fr;
+    }
+    .projects {}
+}
+
+@media(max-width:692px) {
+    main .projects {
+        grid-template-columns: 1fr;
+    }
+    h2 {
+        width: auto;
+        font-size: 1.3em;
+    }
+}
+
+/*cv*/
+
+.cv {
+    padding-top: 10px;
+    min-height: 90vh;
+    background-color: #333;
+}
+
+.cv section {
+    display: flex;
+    height: 70vh;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.cv section .more-info:first-of-type {
+    height: 350px;
+    width: 350px;
+    background-image: url('./img/Przechwytywanie7.PNG');
+    background-position: top;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+@media(max-width:480px) {
+    .cv section .more-info:first-of-type {
+        height: 250px;
+        width: 250px;
+    }
+}
+
+/*footer*/
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 1em;
+    min-height: 10vh;
+    font-size: 1.2em;
+    text-align: right;
+    color: #333;
+    background-color: orange;
+}

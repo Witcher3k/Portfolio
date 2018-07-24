@@ -1,0 +1,180 @@
+@charset "UTF-8";
+* {
+    box-sizing: border-box;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box
+}
+
+body {
+    background-color: #edf0f1;
+}
+
+header {
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    background-color: #397DB8;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    box-shadow: 0px 5px 10px 10px rgba(44, 62, 80, 0.75);
+    padding: 15px 15px;
+}
+
+header input {
+    height: 50px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.20);
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+    padding: 0px 60px 0px 20px;
+    float: left;
+    box-shadow: none;
+    outline: none;
+    border: 0px;
+    border-bottom-right-radius: 25px;
+    border-top-right-radius: 25px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    -moz-appearance: none;
+}
+
+header input::-webkit-input-placeholder {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+header button {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 2;
+    background-color: #fff;
+    -ms-progress-appearance: none;
+    border: 0px;
+    outline: none;
+    box-shadow: 0px;
+    border-radius: 25px;
+}
+
+header button svg {
+    width: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    fill: #397DB8;
+}
+
+main {
+    width: 100%;
+    padding: 15px;
+}
+
+ul.list {
+    margin: 120px 0px 0px 0px;
+    width: 100%;
+    float: left;
+}
+
+ul.list#completed {
+    margin: 40px 0px 0px 0px;
+    position: relative;
+}
+
+ul.list#completed::before {
+    position: absolute;
+    content: 'COMPLETED TASKS:';
+    font-size: 20px;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+ul.list#completed li {
+    opacity: 0.5;
+}
+
+ul.list li {
+    width: 100%;
+    float: left;
+    min-height: 50px;
+    color: #444;
+    background: #fff;
+    font-size: 14px;
+    line-height: 22px;
+    box-shadow: 0px 1px 4px dimgray;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    position: relative;
+    padding: 14px 100px 14px 14px;
+}
+
+li .buttons {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100px;
+    height: 50px;
+}
+
+li .buttons button {
+    position: relative;
+    height: 50px;
+    width: 50px;
+    float: left;
+    box-shadow: none;
+    outline: none;
+    background: none;
+    border: 0px;
+    cursor: pointer;
+}
+
+li .buttons button:last-of-type:before {
+    content: '';
+    height: 25px;
+    width: 1px;
+    background-color: dimgray;
+    position: absolute;
+    left: 0;
+    top: 12.5px;
+}
+
+li .buttons button svg {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: fill 0.2s ease;
+}
+
+li .buttons button.delete svg:hover {
+    fill: red;
+}
+
+li .buttons button.complete svg {
+    fill: #0BA4E0;
+}
+
+li .buttons button.complete svg:hover {
+    fill: #25b99a;
+}
+
+#completed .buttons button.complete svg {
+    background-color: #25b99a;
+    border-radius: 50%;
+    border: 4px solid #25b99a;
+    fill: white;
+}

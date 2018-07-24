@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 1.8em;
+    text-transform: uppercase;
+    background-color: #EDEDED;
+}
+
+header {
+    background-image: url('./img/bg.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    color: black;
+    text-align: center;
+    padding: 1em;
+    border-bottom: 2.5px solid #FEC516;
+}
+
+header section {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+header p {
+    color: black;
+    padding: 1em;
+    text-align: center;
+    font-size: 18px;
+}
+
+header h1 {
+    margin: 1em 0;
+    display: inline;
+    box-sizing: border-box;
+    letter-spacing: 0.3rem;
+}
+
+header img {
+    max-width: 150px;
+    border-radius: 0;
+}
+
+/*Media for header*/
+
+@media(max-width:992px) {
+    header {
+        flex-direction: column;
+    }
+    header p {
+        font-size: 16px;
+        text-align: center;
+    }
+}
+
+/*Main*/
+
+main {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 1rem;
+}
+
+main section article {
+    margin-bottom: 15px;
+}
+
+main section article {
+    padding: 5px;
+}
+
+.description {
+    flex: 0 0 50.00%;
+    text-transform: none;
+}
+
+.description {
+    border-bottom: 1px solid #FEC516;
+}
+
+.company {
+    font-style: italic;
+}
+
+main section article {
+    display: block;
+}
+
+@media(max-width:992px) {
+    .description {
+        border-bottom: 1px solid #FEC516;
+    }
+}
+
+.school~.desc {
+    text-transform: none;
+}
+
+/*skills*/
+
+.skills {
+    display: flex;
+}
+
+.skills ul {
+    flex: 0 0 50%;
+}
+
+/*footer*/
+
+footer {
+    text-transform: none;
+    text-align: right;
+    padding: 0.7em;
+    background-color: dimgray;
+    color: #FEC516;
+}
